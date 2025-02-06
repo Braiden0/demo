@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Payment</title>
+    <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo.jpg" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="log.html">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Parking Payment</h1>
+        <form id="paymentForm">
+            <label for="hours">Parking Duration (hours):</label>
+            <input type="number" id="hours" name="hours" min="1" max="24" required>
+
+            <label for="rate">Rate per hour (Ksh):</label>
+            <input type="number" id="rate" name="rate" value="50" readonly>
+
+            <p>Total: Ksh<span id="totalAmount">0</span></p>
+
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="credit">Credit Card</option>
+                <option value="paypal">M-PESA</option>
+            </select>
+
+            <button type="button" id="payButton">Pay Now</button>
+        </form>
+        <div id="paymentMessage"></div>
+    </div>
+
+    <script src="pay.js"></script>
+</body>
+</html>
